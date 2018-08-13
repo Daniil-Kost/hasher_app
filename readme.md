@@ -14,7 +14,7 @@ or with anything credentials and change settings.py DATABASES dict )
 
 7) Synchronize last changes in the DB:  `python manage.py migrate` 
 
-8) Fill DB by following command: `python maange.py fill_db`
+8) Fill DB by following command: `python manage.py fill_db`
 
 9) Run server `python manage.py runsever`
 
