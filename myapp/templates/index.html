@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% load static from staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block meta_title %}Url List{% endblock meta_title %}
+
+{% block js %}
+
+{% endblock js %}
+
+{% block extra_css %}
+<style>
+</style>
+{% endblock extra_css %}
+
+{% block title %}Hasher App{% endblock title %}
+{% block content %}
+
+{% if user.is_authenticated  %}
+<div class="col-xs-12 col-md-12" style="margin-bottom: 3%;">
+<a href="{% url 'profile' user.id %}">
+    <button style="width:200px; height: 40px;" class="btn btn-primary">Select Words <i class="fa fa-file-word-o" aria-hidden="true"></i></button>
+</a>
+<a href="{% url 'auth_logout' %}">
+    <button style="width:200px; height: 40px;" class="btn btn-danger">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></button>
+</a><br>
+</div>
+
+    <a href="/media/{{ path }}" download><p>Download XML file with User Information</p></a>
+
+<div class="col-xs-12 col-md-12" style="margin-bottom: 3%;">
+<table class="table table-bordered" id ="hasher_table" style="width: 100px;">
+    <thead>
+    <tr class="header">
+      <th class="num">#</th>
+      <th class="name" >Word </th>
+      <th class="name">hash_md5 </th>
+      <th class="name">hash_sha1 </th>
+      <th class="name">hash_sha224 </th>
+      <th class="name">hash_sha256 </th>
+        <th class="name">hash_sha512 </th>
+        <th class="name">File </th>
+    </tr>
+    </thead>
+     <tbody>
+
+
+	{% for hash in hashes %}
+
+      <tr>
+        <td>{{ forloop.counter }}</td>
+		<td>
+            {{ hash.word }}
+        </td>
+      	<td>
+            {{ hash.hash_md5 }}
+        </td>
+          <td>
+              {{ hash.hash_sha1 }}
+        </td>
+        <td>
+            {{ hash.hash_sha224 }}
+        </td>
+        <td>
+            {{ hash.hash_sha256 }}
+        </td>
+          <td>
+            {{ hash.hash_sha512 }}
+        </td>
+          <td>
+              <a href="/media/{{ hash.file.name }}" download>
+              {{ hash.file.name }}
+              </a>
+        </td>
+      </tr>
+       {% endfor %}
+      </tbody>
+      </table>
+</div>
+
+
+    {% else %}
+    <div class="alert alert-warning" role="alert">
+    <p>Please sign in via GitHub to select start Words and get Hashes</p>
+    </div>
+    <div class="col-xs-12 col-md-12" style="margin-bottom: 3%;">
+    <a href="{% url 'social:begin' 'github' %}">
+        <button style="background-color: black; width:200px; height: 40px;" class="btn btn-primary">Login via GitHub <i class="fa fa-github" aria-hidden="true"></i></button></a><br>
+    </div>
+{% endif %}
+{% endblock content %}
+
+<script>
+
+</script>

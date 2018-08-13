@@ -1,0 +1,14 @@
+django==1.11
+psycopg2
+django-crispy-forms==1.6.1
+Pillow
+social-auth-app-django
+flake8
+python-geoip
+python-geoip-geolite2
+pyyaml
+ua-parser
+user-agents
+django-user-agents
+django-ipware
+python-memcached

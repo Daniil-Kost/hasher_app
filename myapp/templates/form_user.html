@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load static from staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block meta_title %}Url List{% endblock meta_title %}
+
+{% block extra_css %}
+<style>
+
+</style>
+{% endblock extra_css %}
+
+{% block menu %}
+
+	  <div class="col-xs-12">
+	  <ul class="nav nav-tabs" role="tablist">
+
+      <li role ="presentation" {% if '/profile/' in request.path %}
+	  	class="active" {% endif %}>
+	  	<a href="#">User Profile</a>
+
+	  	</li>
+
+
+	</ul>
+
+
+	</div>
+	{% endblock menu %}
+
+{% block title %}Hasher App{% endblock title %}
+{% block content %}
+<div class="col-xs-12 col-md-12" style="margin-bottom: 5%;">
+    {% crispy form %}
+</div>
+{% endblock content %}

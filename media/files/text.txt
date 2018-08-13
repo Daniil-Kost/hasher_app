@@ -1,0 +1,137 @@
+{
+    "email": "lemberg@gmail.com",
+    "password": "Octfdfdf33!3",
+    "first_name": "Dan",
+    "last_name": "Lemk",
+    "partner_id": "1",
+    "adviser_id": "1",
+    "status": "leader",
+    "is_client": false,
+    "is_active": 1,
+    "last_contact_dttm": None,
+    "is_superuser": 0
+}
+
+{
+    "email": "new77fgffffdddd71@gmail.com",
+    "password": "Octfdfdf33!3",
+    "first_name": "Mikef",
+    "last_name": "Baver",
+    "middle_name": "Jonh",
+    "partner_id": "1",
+    "adviser_id": "1",
+    "status": "leader",
+    "is_client": false,
+    "is_active": 1,
+    "client_id": 21,
+    "last_contact_dttm": null,
+    "is_superuser": 1,
+    "address": {
+         "country": "United Kingdom",
+         "address_1": "Ukraine",
+         "address_2": "Kiev obl",
+         "address_3": "kievskiy district",
+         "address_4": "Bankova 7",
+         "postcode": "AA9A 9AA",
+         "city": "London",
+         "country_cd": "GB"}
+}
+
+{
+    "user_uuid": "0058587c-11d7-4e5d-8b7e-6a96bc25d52f",
+    "profile_id": "b098cf15-c1b5-4b9e-83ef-3f45b500eda9",
+    "access": true,
+    "status": "OK"
+}"status": "OK"
+}
+
+    "survey_uuid": "fcf5df2b-0243-49ce-9605-275bc7991ee7"
+
+Wealth login:
+lemk@ukr.net
+Test201!8
+
+python main.py --port=8080 --env=local
+
+Daniil-Kost
+913fb8c123e37d82cdab424f91b634a2eff4c132
+
+git fetch --all 
+git reset --hard origin/master 
+git pull origin master
+
+pre-commit run --all-files
+
+https://ideaserver.pro/
+
+    def get_or_404(self, id, func, model):
+        user = func(id)
+        if not user:
+            self.json_response(
+                {"status": "ERR", "message": "{} id {} not found".format(model, id)},
+                http.client.NOT_FOUND,
+            )
+        else:
+            return user
+
+LAMBDA:
+ids = [1,5,7,8]
+l = lambda id: ids[id]
+s = ','.join(str(l(i)) for i in range(len(ids)))
+
+
+def password_generator(self, size=4, charters=string.ascii_lowercase + string.digits):
+
+           return 'Oct!12'.join(random.choice(charters) for _ in range(size))
+
+
+token = OAuth2BackendClient.get_backend_token()
+self.json_response(token)
+
+ 
+ ############################################# PROFILE API ############################
+Hi!
+Thank you for your  Invitation. I have experience in Tornado and Google App Engine (I develop my last project with this techologies).  I use Python2/3 language, and I know MySQL and SQLite DB. I have exeperience in build REST-API services. I develop projects with good and clean code. 
+I am responsible, creative and I very like to develop.
+My GitHub account: https://github.com/Daniil-Kost/studentsdb
+My site: http://lemk.site/
+Best regards, Daniil. 
+
+Hi!
+I am really intersted in your vacancy.  I'm a Python Developer with a commercial development experience of 1.5 years. I remotely worked in four freelance projects and in one big project in the company. For get more info - please review my resume.
+I would be grateful for any feedback.
+My website: http://lemk.site/
+My GitHub account: https://github.com/Daniil-Kost/studentsdb
+Sincerely, Daniil Kostyshak.
+
+
+
+Здравствуйте!
+Очень заинтересовала ваша вакансия. Я Python Developer с опытом коммерческой разработки 1,5 года. Я удаленно работал в различных проектах как на фрилансе так и на фирме. Более подробная информация указана в моем резюме. 
+Буду признателен за любую обратную связь. 
+Мой сайт: http://lemk.site/
+Мой аккаунт на GitHub: https://github.com/Daniil-Kost/studentsdb
+С уважением, Даниил Костышак.
+
+
+def edit_text(text):
+    try:
+        pattern = re.compile(r'\w+')
+        new_words = pattern.findall(text)
+        counter = 0
+        new_text = ""
+        for word in new_words:
+            counter += 1
+            if len(word) == 6:
+                new_words.remove(word)
+                word += "™"
+                new_words.insert(counter-1, word)
+            else:
+                pass
+            new_text += word + " "
+    except TypeError:
+        new_text = ""
+    return new_text
+
+text = get_text("https://pythonworld.ru/tipy-dannyx-v-python")
+new_text = edit_text(text)
